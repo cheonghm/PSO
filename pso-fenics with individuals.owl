@@ -1,0 +1,1062 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://TBD-URL/pso-fenics"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://TBD-URL/pso-fenics">
+    <Prefix name="" IRI="http://TBD-URL/pso-fenics#"/>
+    <Prefix name="bfo" IRI="http://purl.obolibrary.org/obo/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="pso" IRI="http://TBD-URL/pso#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="pso-fenics" IRI="http://TBD-URL/pso-fenics#"/>
+    <Import>http://TBD-URL/pso</Import>
+    <Declaration>
+        <Class IRI="#body_force"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#density"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#displacement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#displacement_boundary_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#elastic_modulus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#heat_diffusion_of_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#heat_flux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#heat_flux_boundary_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#number_of_time_steps"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#pressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#pressure_boundary_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#pressure_initial_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#shear_modulus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#specific_heat_capacity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#surface_force"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#surface_force_boundary_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#temperature_boundary_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#temperature_initial_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#thermal_conductivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#velocity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#velocity_boundary_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#velocity_initial_condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#viscosity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Poisson&apos;s_ratio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_value"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dirichlet_boundary_condition_on_PSI-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Neumann_boundary_condition_on_PSI-2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#body_force_throughout_pipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cast_iron_constituting_pipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#displacement_at_PSI-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#distributed_force_at_PSI-2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#elastic_modulus_of_cast_iron_consitituting_pipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pipe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pipe_surface_interface_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pipe_surface_interface_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shear_modulus_of_cast_iron_consitituting_pipe"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#pso_dialogue_trigger"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/mbox"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="pso:duration_of_physical_behavior"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#number_of_time_steps"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pso:duration_of_physical_behavior"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#has_value"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="pso:fiat_object_surface"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="pso:continuant_part_of"/>
+            <Class abbreviatedIRI="bfo:BFO_0000030"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#body_force"/>
+        <Class abbreviatedIRI="pso:physical_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#density"/>
+        <Class abbreviatedIRI="pso:material_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#displacement"/>
+        <Class abbreviatedIRI="pso:physical_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#displacement_boundary_condition"/>
+        <Class abbreviatedIRI="pso:boundary_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#displacement_boundary_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <Class abbreviatedIRI="pso:fiat_object_surface"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#displacement_boundary_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <Class IRI="#displacement"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#elastic_modulus"/>
+        <Class abbreviatedIRI="pso:material_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <Class abbreviatedIRI="pso:physical_behavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#heat_flux_boundary_condition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#heat_flux"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#temperature_boundary_condition"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class abbreviatedIRI="pso:duration_of_physical_behavior"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#temperature_initial_condition"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#specific_heat_capacity"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <ObjectIntersectionOf>
+                        <Class abbreviatedIRI="pso:material_substance"/>
+                        <ObjectExactCardinality cardinality="1">
+                            <ObjectProperty abbreviatedIRI="pso:constitutes"/>
+                            <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                        </ObjectExactCardinality>
+                    </ObjectIntersectionOf>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#thermal_conductivity"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <ObjectIntersectionOf>
+                        <Class abbreviatedIRI="pso:material_substance"/>
+                        <ObjectExactCardinality cardinality="1">
+                            <ObjectProperty abbreviatedIRI="pso:constitutes"/>
+                            <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                        </ObjectExactCardinality>
+                    </ObjectIntersectionOf>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_flux"/>
+        <Class abbreviatedIRI="pso:physical_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_flux_boundary_condition"/>
+        <Class abbreviatedIRI="pso:boundary_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#heat_flux_boundary_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#heat_flux"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="pso:fiat_object_surface"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+        <Class abbreviatedIRI="pso:physical_behavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#body_force"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#displacement_boundary_condition"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#surface_force_boundary_condition"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#elastic_modulus"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <ObjectIntersectionOf>
+                        <Class abbreviatedIRI="pso:material_substance"/>
+                        <ObjectExactCardinality cardinality="1">
+                            <ObjectProperty abbreviatedIRI="pso:constitutes"/>
+                            <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                        </ObjectExactCardinality>
+                    </ObjectIntersectionOf>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#shear_modulus"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <ObjectIntersectionOf>
+                        <Class abbreviatedIRI="pso:material_substance"/>
+                        <ObjectExactCardinality cardinality="1">
+                            <ObjectProperty abbreviatedIRI="pso:constitutes"/>
+                            <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                        </ObjectExactCardinality>
+                    </ObjectIntersectionOf>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <Class abbreviatedIRI="pso:physical_behavior"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#pressure_boundary_condition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#pressure_initial_condition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#velocity_initial_condition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#body_force"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class IRI="#velocity_boundary_condition"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+            <Class abbreviatedIRI="pso:duration_of_physical_behavior"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#density"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <ObjectIntersectionOf>
+                        <Class abbreviatedIRI="pso:material_substance"/>
+                        <ObjectExactCardinality cardinality="1">
+                            <ObjectProperty abbreviatedIRI="pso:constitutes"/>
+                            <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                        </ObjectExactCardinality>
+                    </ObjectIntersectionOf>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#viscosity"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <ObjectIntersectionOf>
+                        <Class abbreviatedIRI="pso:material_substance"/>
+                        <ObjectExactCardinality cardinality="1">
+                            <ObjectProperty abbreviatedIRI="pso:constitutes"/>
+                            <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                        </ObjectExactCardinality>
+                    </ObjectIntersectionOf>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#number_of_time_steps"/>
+        <Class abbreviatedIRI="bfo:BFO_0000144"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#number_of_time_steps"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#has_value"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pressure"/>
+        <Class abbreviatedIRI="pso:physical_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pressure_boundary_condition"/>
+        <Class abbreviatedIRI="pso:boundary_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pressure_boundary_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#pressure"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="pso:fiat_object_surface"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pressure_initial_condition"/>
+        <Class abbreviatedIRI="pso:initial_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pressure_initial_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#pressure"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#shear_modulus"/>
+        <Class abbreviatedIRI="pso:material_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#specific_heat_capacity"/>
+        <Class abbreviatedIRI="pso:material_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#surface_force"/>
+        <Class abbreviatedIRI="pso:physical_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#surface_force_boundary_condition"/>
+        <Class abbreviatedIRI="pso:boundary_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#surface_force_boundary_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#surface_force"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="pso:fiat_object_surface"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#temperature"/>
+        <Class abbreviatedIRI="pso:physical_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#temperature_boundary_condition"/>
+        <Class abbreviatedIRI="pso:boundary_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#temperature_boundary_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#temperature"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="pso:fiat_object_surface"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#temperature_initial_condition"/>
+        <Class abbreviatedIRI="pso:initial_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#temperature_initial_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#temperature"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#thermal_conductivity"/>
+        <Class abbreviatedIRI="pso:material_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#velocity"/>
+        <Class abbreviatedIRI="pso:physical_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#velocity_boundary_condition"/>
+        <Class abbreviatedIRI="pso:boundary_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#velocity_boundary_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#velocity"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="pso:fiat_object_surface"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#velocity_initial_condition"/>
+        <Class abbreviatedIRI="pso:initial_condition_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#velocity_initial_condition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#velocity"/>
+                <ObjectExactCardinality cardinality="1">
+                    <ObjectProperty abbreviatedIRI="bfo:RO_0000080"/>
+                    <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#viscosity"/>
+        <Class abbreviatedIRI="pso:material_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Poisson&apos;s_ratio"/>
+        <Class abbreviatedIRI="pso:material_property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="bfo:BFO_0000030"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="bfo:RO_0000056"/>
+            <Class abbreviatedIRI="pso:physical_behavior"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="bfo:BFO_0000030"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="pso:made_of"/>
+            <Class abbreviatedIRI="pso:material_substance"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="pso:boundary_condition_situation"/>
+        <Class abbreviatedIRI="pso:duration_of_physical_behavior"/>
+        <Class abbreviatedIRI="pso:initial_condition_situation"/>
+        <Class abbreviatedIRI="pso:physical_behavior"/>
+        <Class IRI="#number_of_time_steps"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="pso:fiat_object_surface"/>
+        <Class abbreviatedIRI="bfo:BFO_0000030"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#body_force"/>
+        <Class IRI="#displacement"/>
+        <Class IRI="#heat_flux"/>
+        <Class IRI="#pressure"/>
+        <Class IRI="#surface_force"/>
+        <Class IRI="#temperature"/>
+        <Class IRI="#velocity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#density"/>
+        <Class IRI="#elastic_modulus"/>
+        <Class IRI="#shear_modulus"/>
+        <Class IRI="#specific_heat_capacity"/>
+        <Class IRI="#thermal_conductivity"/>
+        <Class IRI="#viscosity"/>
+        <Class IRI="#Poisson&apos;s_ratio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#displacement_boundary_condition"/>
+        <Class IRI="#heat_flux_boundary_condition"/>
+        <Class IRI="#pressure_boundary_condition"/>
+        <Class IRI="#surface_force_boundary_condition"/>
+        <Class IRI="#temperature_boundary_condition"/>
+        <Class IRI="#velocity_boundary_condition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#heat_diffusion_of_object"/>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+        <Class IRI="#motion_of_viscous_fluid_object"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#pressure_initial_condition"/>
+        <Class IRI="#temperature_initial_condition"/>
+        <Class IRI="#velocity_initial_condition"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#displacement_boundary_condition"/>
+        <NamedIndividual IRI="#Dirichlet_boundary_condition_on_PSI-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#surface_force_boundary_condition"/>
+        <NamedIndividual IRI="#Neumann_boundary_condition_on_PSI-2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#body_force"/>
+        <NamedIndividual IRI="#body_force_throughout_pipe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pso:material_substance"/>
+        <NamedIndividual IRI="#cast_iron_constituting_pipe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#displacement"/>
+        <NamedIndividual IRI="#displacement_at_PSI-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#surface_force"/>
+        <NamedIndividual IRI="#distributed_force_at_PSI-2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#elastic_modulus"/>
+        <NamedIndividual IRI="#elastic_modulus_of_cast_iron_consitituting_pipe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#linear_deformation_of_solid_object"/>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="bfo:BFO_0000030"/>
+        <NamedIndividual IRI="#pipe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pso:fiat_object_surface"/>
+        <NamedIndividual IRI="#pipe_surface_interface_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="pso:fiat_object_surface"/>
+        <NamedIndividual IRI="#pipe_surface_interface_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#shear_modulus"/>
+        <NamedIndividual IRI="#shear_modulus_of_cast_iron_consitituting_pipe"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Dirichlet_boundary_condition_on_PSI-1"/>
+        <NamedIndividual IRI="#Neumann_boundary_condition_on_PSI-2"/>
+        <NamedIndividual IRI="#body_force_throughout_pipe"/>
+        <NamedIndividual IRI="#cast_iron_constituting_pipe"/>
+        <NamedIndividual IRI="#displacement_at_PSI-1"/>
+        <NamedIndividual IRI="#distributed_force_at_PSI-2"/>
+        <NamedIndividual IRI="#elastic_modulus_of_cast_iron_consitituting_pipe"/>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+        <NamedIndividual IRI="#pipe"/>
+        <NamedIndividual IRI="#pipe_surface_interface_1"/>
+        <NamedIndividual IRI="#pipe_surface_interface_2"/>
+        <NamedIndividual IRI="#shear_modulus_of_cast_iron_consitituting_pipe"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+        <NamedIndividual IRI="#Dirichlet_boundary_condition_on_PSI-1"/>
+        <NamedIndividual IRI="#displacement_at_PSI-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+        <NamedIndividual IRI="#Dirichlet_boundary_condition_on_PSI-1"/>
+        <NamedIndividual IRI="#pipe_surface_interface_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+        <NamedIndividual IRI="#Neumann_boundary_condition_on_PSI-2"/>
+        <NamedIndividual IRI="#distributed_force_at_PSI-2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+        <NamedIndividual IRI="#Neumann_boundary_condition_on_PSI-2"/>
+        <NamedIndividual IRI="#pipe_surface_interface_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+        <NamedIndividual IRI="#Dirichlet_boundary_condition_on_PSI-1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:BFO_0000119"/>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+        <NamedIndividual IRI="#Neumann_boundary_condition_on_PSI-2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+        <NamedIndividual IRI="#body_force_throughout_pipe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+        <NamedIndividual IRI="#elastic_modulus_of_cast_iron_consitituting_pipe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:RO_0000057"/>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+        <NamedIndividual IRI="#shear_modulus_of_cast_iron_consitituting_pipe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pso:has_continuant_part"/>
+        <NamedIndividual IRI="#pipe"/>
+        <NamedIndividual IRI="#pipe_surface_interface_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pso:has_continuant_part"/>
+        <NamedIndividual IRI="#pipe"/>
+        <NamedIndividual IRI="#pipe_surface_interface_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="pso:made_of"/>
+        <NamedIndividual IRI="#pipe"/>
+        <NamedIndividual IRI="#cast_iron_constituting_pipe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="bfo:RO_0000056"/>
+        <NamedIndividual IRI="#pipe"/>
+        <NamedIndividual IRI="#linear_deformation_of_pipe"/>
+    </ObjectPropertyAssertion>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>boundary condition assignment</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="pso:boundary_condition_situation"/>
+                <Variable IRI="#b"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="pso:fiat_object_surface"/>
+                <Variable IRI="#s"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="pso:physical_property"/>
+                <Variable IRI="#p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000056"/>
+                <Variable IRI="#s"/>
+                <Variable IRI="#b"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000056"/>
+                <Variable IRI="#p"/>
+                <Variable IRI="#b"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000086"/>
+                <Variable IRI="#s"/>
+                <Variable IRI="#p"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>material property assignment</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="pso:physical_behavior"/>
+                <Variable IRI="#b"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                <Variable IRI="#o"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="pso:material_substance"/>
+                <Variable IRI="#m"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="pso:made_of"/>
+                <Variable IRI="#o"/>
+                <Variable IRI="#m"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000056"/>
+                <Variable IRI="#o"/>
+                <Variable IRI="#b"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="pso:material_property"/>
+                <Variable IRI="#p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000056"/>
+                <Variable IRI="#p"/>
+                <Variable IRI="#b"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000086"/>
+                <Variable IRI="#m"/>
+                <Variable IRI="#p"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>body property assignment</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="pso:physical_behavior"/>
+                <Variable IRI="#b"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="bfo:BFO_0000030"/>
+                <Variable IRI="#o"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="pso:physical_property"/>
+                <Variable IRI="#p"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000056"/>
+                <Variable IRI="#o"/>
+                <Variable IRI="#b"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000056"/>
+                <Variable IRI="#p"/>
+                <Variable IRI="#b"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="bfo:RO_0000086"/>
+                <Variable IRI="#o"/>
+                <Variable IRI="#p"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#displacement_boundary_condition</IRI>
+        <Literal>displacement boundary condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pso:pso_synonyms"/>
+        <IRI>#elastic_modulus</IRI>
+        <Literal>Young&apos;s modulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_value</IRI>
+        <Literal>has value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#heat_diffusion_of_object</IRI>
+        <Literal>heat diffusion of object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#heat_flux_boundary_condition</IRI>
+        <Literal>heat flux boundary condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#linear_deformation_of_solid_object</IRI>
+        <Literal>linear deformation of solid object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#motion_of_viscous_fluid_object</IRI>
+        <Literal>motion of viscous fluid object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#number_of_time_steps</IRI>
+        <Literal>number of time steps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pressure_boundary_condition</IRI>
+        <Literal>pressure boundary condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pressure_initial_condition</IRI>
+        <Literal>pressure initial condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pso_dialogue_trigger</IRI>
+        <Literal>pso dialogue trigger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pso:pso_synonyms"/>
+        <IRI>#shear_modulus</IRI>
+        <Literal>modulus of rigidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pso:pso_synonyms"/>
+        <IRI>#surface_force</IRI>
+        <Literal>traction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#surface_force_boundary_condition</IRI>
+        <Literal>surface force boundary condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temperature_boundary_condition</IRI>
+        <Literal>temperature boundary condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temperature_initial_condition</IRI>
+        <Literal>temperature initial condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#velocity_boundary_condition</IRI>
+        <Literal>velocity boundary condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#velocity_initial_condition</IRI>
+        <Literal>velocity initial condition</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

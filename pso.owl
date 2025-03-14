@@ -1,0 +1,1791 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://TBD-URL/pso"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://TBD-URL/pso">
+    <Prefix name="" IRI="http://TBD-URL/pso"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="pso" IRI="http://TBD-URL/pso#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">This ontology is intended to assist in modeling some physical phenomena of interest in a veridical manner, while capturing the necessary and reusable information for physics-based simulation solvers.
+
+The ontology extends an existing and well-established upper ontology, Basic Formal Ontology 2.0 (https://github.com/BFO-ontology/BFO2) and therefore adopts its high-level categorization. 
+
+To learn more about the development and application of the ontology, please see our paper: https://www.tandfonline.com/doi/abs/10.1080/09544828.2019.1644301
+
+We are currently planning to publicly release the ontology with an open-source license, at which point we will create an official ontology IRI as well. At this point, please avoid using this ontology directly in any commercial software platform or application.
+
+For more information, please contact Hyunmin Cheong hyunmin.cheong@autodesk.com</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">author: Hyunmin Cheong, Adrian Butscher
+affiliation: Autodesk Research</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#boundary_condition_situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#contact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#domain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#duration_of_physical_behavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fiat_object_surface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#field"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#geometric_model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#initial_condition_situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#material_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#material_substance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#mesh"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#number_of_time_steps"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#physical_behavior"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#physical_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#realizable_motion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#shape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#state_of_matter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#time_step"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#constitutes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#continuant_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_continuant_part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_about"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#made_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#represented_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000119"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000133"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000155"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000156"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000052"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000056"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000057"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000080"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000092"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001015"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001025"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_measured_value"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#pso_comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#pso_synonyms"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0001900"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0040042"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#boundary_condition_situation"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000144"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#contact"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#domain"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#duration_of_physical_behavior"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000144"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#energy"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fiat_object_surface"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000024"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#field"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#geometric_model"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#initial_condition_situation"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000144"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#material_property"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#material_substance"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#mesh"/>
+        <Class IRI="#geometric_model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#number_of_time_steps"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#physical_behavior"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000144"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#physical_property"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#realizable_motion"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#shape"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#state_of_matter"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#time_step"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#continuant_part_of"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_continuant_part"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000080"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000052"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000092"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000052"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#constitutes"/>
+        <ObjectProperty IRI="#made_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#continuant_part_of"/>
+        <ObjectProperty IRI="#has_continuant_part"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#is_about"/>
+        <ObjectProperty IRI="#represented_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000119"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000133"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000155"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000156"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000056"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000057"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000080"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000092"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001015"/>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001025"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001015"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001025"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#constitutes"/>
+        <Class IRI="#material_substance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#continuant_part_of"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_continuant_part"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_about"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#made_of"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#physically_related_to"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/154</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000119"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/153</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000133"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000144"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/539</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000155"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/540</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000156"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000056"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000080"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000092"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001015"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001015"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+            <ObjectComplementOf>
+                <Class IRI="http://purl.obolibrary.org/obo/BFO_0000006"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+            <Literal>This is redundant with the more specific &apos;independent and not spatial region&apos; constraint. We leave in the redundant axiom for use with reasoners that do not use negation.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001025"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001025"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+            <ObjectComplementOf>
+                <Class IRI="http://purl.obolibrary.org/obo/BFO_0000006"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#constitutes"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#continuant_part_of"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_continuant_part"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#made_of"/>
+        <Class IRI="#material_substance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#physically_related_to"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#represented_by"/>
+        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/153</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000119"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000144"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/154</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000133"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/540</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000155"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000008"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/539</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000156"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000052"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000056"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000080"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000092"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001015"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001015"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+            <ObjectComplementOf>
+                <Class IRI="http://purl.obolibrary.org/obo/BFO_0000006"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+            <Literal>This is redundant with the more specific &apos;independent and not spatial region&apos; constraint. We leave in the redundant axiom for use with reasoners that do not use negation.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001025"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0001025"/>
+        <ObjectIntersectionOf>
+            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000004"/>
+            <ObjectComplementOf>
+                <Class IRI="http://purl.obolibrary.org/obo/BFO_0000006"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#boundary_condition_situation</IRI>
+        <Literal xml:lang="en">A boundary condition refers to a situation in which some fiat object surface part of a material entity bears some physical property throughout the physical behaviour of interest. The physical properties vary depending on the types of boundary conditions and physical behaviour. In simulation, boundary conditions are always applied on the domain boundaries, which represent the surfaces of the corresponding independent continuant in physical reality.
+
+The notion of a situation is adopted from GFO. GFO defines a configuration as an aggregate of facts formed with multiple material structures, properties, and relations (Herre and Heller 2005). Then, a situation is defined as ‘a special configuration which can be comprehended as a whole and satisfies certain conditions of unity, which are imposed by relations and categories associated with the situation’ (Herre and Heller 2005). BFO does not explicitly categorise a situation, but Ceusters and Smith (2015) uses ‘configuration’, defined as a portion of reality made up by multiple entities that are related to each other. 
+
+Another issue is related to the limited expressiveness of first-order logic. A proper logical definition of a boundary condition would require reification of relations involved in a situation. However, quantifying over relations is not possible in first-order logic.
+
+We posit that situations that are represented by boundary conditions as &quot;boundary condition situation&quot; and define it as a type of process. This process then has following participants -- a fiat object surface and its particular physical property that is relevant to the physical behavior involved.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#boundary_condition_situation</IRI>
+        <Literal xml:lang="en">boundary condition situation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#constitutes</IRI>
+        <Literal xml:lang="en">a portion of cast iron constitues an engine block</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#constitutes</IRI>
+        <Literal>constitutes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#contact</IRI>
+        <Literal xml:lang="en">A contact is formed between a pair of surfaces of objects, where the two surfaces are touching with each other but there is no overlap between the objects. In mereotopology, this relationship is expressed as an external connection (Varzi 1996; Cohn et al. 1997; Smith and Varzi 2000).
+
+The last example of a contact (see in &apos;pso example of usage&apos;) can be thought as a strong rather than a weak contact (Smith 1996), where the objects in contact will move together unless a certain separating process occurs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#contact</IRI>
+        <Literal xml:lang="en">teeth of gears engaged, a water droplet sitting on a glass panel, or a protective membrane glued on a device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#contact</IRI>
+        <Literal xml:lang="en">a relational quality that is formed between a pair of PSO: fiat object surface parts, where they are externally connected to each other.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contact</IRI>
+        <Literal xml:lang="en">contact</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#continuant_part_of</IRI>
+        <Literal xml:lang="en">a swingarm is continuant part of a motorcycle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#continuant_part_of</IRI>
+        <Literal xml:lang="en">continuant part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#domain</IRI>
+        <Literal xml:lang="en">A domain represents some independent continuant that participates in the physical behaviour to be simulated. For example, a domain can represent a solid object in structural simulation, a fluid substance in fluid simulation, or a spatial region in which a field is located in electromagnetic simulation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#domain</IRI>
+        <Literal xml:lang="en">domain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#duration_of_physical_behavior</IRI>
+        <Literal xml:lang="en">the duration of a pumping process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#duration_of_physical_behavior</IRI>
+        <Literal>duration of physical behavior</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#energy</IRI>
+        <Literal xml:lang="en">Energy is categorised as a type of realisable entity because it is the bearing material entity’s disposition to do work. Kinetic energy is a disposition of a pendulum to do work via its movement, strain energy is a disposition of a deformed object to ‘undeform”, thermal energy is a disposition of a furnace to transfer heat to its surroundings, electrical energy is a disposition of a generator to supply electrons, and so on. A disposition is a type of a realisable entity in BFO.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#energy</IRI>
+        <Literal xml:lang="en">a disposition of a material entity to do work of different forms, e.g. mechanical, thermal, electrical, etc., via an unfolding physical process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#energy</IRI>
+        <Literal xml:lang="en">energy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#fiat_object_surface</IRI>
+        <Literal xml:lang="en">Object surfaces are especially important in PSO because they are referred by boundary conditions to set up a valid problem for simulation and identify contacts between objects. Because a fiat object surface part is a fiat object part (hence a material entity), it can bear physical and material properties. It is different from a continuant fiat boundary in BFO, which is an immaterial entity (Arp, Smith, and Spear 2015). Rather, one could define a fiat object surface part as a portion of an object that is located along a particular continuant fiat boundary. What constitutes as minimal can be defined based on the modeller’s perspective on a particular physical phenomenon of interest. The important point here is that once a fiat object surface part is demarcated based on that perspective, it can be communicated between different applications in a consistent manner.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#fiat_object_surface</IRI>
+        <Literal xml:lang="en">the layer of water on top of a lake, the interior wall of a pipe, or the outer surface of a tyre in contact with the ground.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#fiat_object_surface</IRI>
+        <Literal xml:lang="en">a fiat object part of an object that is minimal in one spatial dimension.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fiat_object_surface</IRI>
+        <Literal xml:lang="en">fiat object surface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#field</IRI>
+        <Literal xml:lang="en">A field is also treated as a realisable entity, because it is generated from the bearing material entity as a disposition to affect other material entities co-located with the field. For example, a gravitational field arises from a bearing object, e.g. Sun, and it has the potential to induce gravitational forces on other objects co-located with the field. Another prominent example of fields are electromagnetic fields, which are generated from an electrically charged object and induce electromagnetic forces on other objects co-located with the field.
+
+Energy and fields are perhaps the most contentious categories in PSO. Both entities are well-defined using mathematics, but less clear to be identified in reality because they are not directly observable and can only be indirectly measured. At the same time, they would no longer exist if the originating material entity ceases to exist (e.g. the gravitational field of Sun would no longer exist if Sun disappeared); hence, our commitment to classify them as specifically dependent continuants. In addition, they both can be thought of as dispositions of the objects to affect other objects, hence the classification as a realisable entity (disposition).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#field</IRI>
+        <Literal xml:lang="en">a disposition of a material entity to induce forces on other material entities co-located with the field.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#field</IRI>
+        <Literal xml:lang="en">field</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#geometric_model</IRI>
+        <Literal xml:lang="en">A geometric model represents the shape of some independent continuant. In CAD/CAE applications, geometric models are typically concretised in geometry files such as STEP or OBJ files. Note the distinction of geometric models from the physical entities themselves – the former is an information content entity that is a visual representation of the latter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#geometric_model</IRI>
+        <Literal xml:lang="en">geometric model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#has_continuant_part</IRI>
+        <Literal>&quot;a motorcycle has a continuant part swingarm&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_continuant_part</IRI>
+        <Literal>has continuant part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#initial_condition_situation</IRI>
+        <Literal xml:lang="en">An initial condition refers to a situation in which some material entity bears some physical property at the onset of a physical behaviour. Similar to a boundary condition, the physical properties vary depending on the types of the physical behaviour involved, and a simplified definition that does not require quantifying over relations can be used. An initial condition is always applied on the entirety of a domain.
+
+We posit that situations that are represented by initial conditions as &quot;intial condition situation&quot; and define it as a type of process. This process then has following participants -- an object and its particular physical property that is relevant to the physical behavior involved.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#initial_condition_situation</IRI>
+        <Literal xml:lang="en">initial condition situation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#is_about</IRI>
+        <Literal xml:lang="en">a particular mesh file is about the shape of a car.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>#is_about</IRI>
+        <Literal xml:lang="en">This document is about information artifacts and their representations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#is_about</IRI>
+        <Literal xml:lang="en">Is_about is a (currently) primitive relation that relates an information artifact to an entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#is_about</IRI>
+        <Literal xml:lang="en">7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of &quot;mentions&quot; relation. Weaken the is_about relationship to be primitive. We will try to build it back up by elaborating the various subproperties that are more precisely defined. Some currently missing phenomena that should be considered &quot;about&quot; are predications - &quot;The only person who knows the answer is sitting beside me&quot; , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <IRI>#is_about</IRI>
+        <Literal xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#is_about</IRI>
+        <Literal xml:lang="en">this term is part of the Information Artifact Ontology.
+http://www.obofoundry.org/ontology/iao.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_about</IRI>
+        <Literal xml:lang="en">is about</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#made_of</IRI>
+        <Literal xml:lang="en">an engine block is made of a portion of cast iron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#made_of</IRI>
+        <Literal xml:lang="en">made of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#material_property</IRI>
+        <Literal xml:lang="en">Material properties characterise a material substance, which in turn affect how a material entity made of the material substance physically behaves under some physical processes.
+
+Material properties are distinguished from physical properties because the values of the former properties can be used as the identity criteria for a material substance while the latter cannot. For example, the value of an elastic modulus alone can dictate the type of material substance that a material entity is made of. However, the pressure applied on a material entity cannot dictate which material substance it is made of.
+
+Again, we do not present a detailed taxonomy of material properties in the current work, but assume that a specific application of PSO can define one for its purpose.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#material_property</IRI>
+        <Literal xml:lang="en">density, viscosity, elastic modulus, thermal conductivity, opacity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#material_property</IRI>
+        <Literal xml:lang="en">a quality that can be measured to identify the physical characteristics of a PSO: material substance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#material_property</IRI>
+        <Literal xml:lang="en">material property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#material_substance</IRI>
+        <Literal xml:lang="en">Under a material entity, we introduce a category called material substance to classify different types of material substances such as aluminium, concrete, or ethanol, which are used to identify what the object to be simulated is made of. In engineering, we typically denote material substances simply as ‘materials’. In case of a multi-material object, multiple material substances can be associated with the particular object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#material_substance</IRI>
+        <Literal xml:lang="en">a portion of aluminium, a portion of concrete, or a portion of ethanol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#material_substance</IRI>
+        <Literal xml:lang="en">a chemical substance that a material entity is made of.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#material_substance</IRI>
+        <Literal xml:lang="en">material substance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#mesh</IRI>
+        <Literal xml:lang="en">A mesh is a specific type of a geometric model that uses a set of polygons to represent the shape of some independent continuant. It is one of many techniques used to discretise the space of a domain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#mesh</IRI>
+        <Literal xml:lang="en">mesh</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#physical_behavior</IRI>
+        <Literal xml:lang="en">A physical behaviour demarcates some parts of a process according to specific laws of physics. Smith (2012) denotes such parts of a process as process profiles. Process profiles can be thought as different aspects of a process that are identified for a particular purpose. The notion of process profile part is different from temporal part, as in a process profile occurs throughout the same temporal region as the whole process. Depending on the types of simulation in which a user is interested, different physical behaviours of a physical process can be selectively identified.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#physical_behavior</IRI>
+        <Literal xml:lang="en">the thermal behaviour of fluid, the dynamic motion behaviour of a turbine, and the electromagnetic behaviour of an electric motor could be identified as different physical behaviours of a pumping process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#physical_behavior</IRI>
+        <Literal xml:lang="en">a process profile that is part of some process while occupying the same temporal region, and follows a specific law of physics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#physical_behavior</IRI>
+        <Literal xml:lang="en">physical behavior</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#physical_property</IRI>
+        <Literal xml:lang="en">Physical properties are a set of qualities that describe the physical state of a material entity.
+
+Physical properties are typically what get computed during physics-based simulation to predict the behaviour of objects. In the current work, we have not made distinctions of physical properties into those that can be measured as vector vs. scalar quantities, or fundamental vs. derived quantities. Instead, we allow such distinctions to be made for specific applications of PSO. The current work also does not present an extensive list of physical properties, but existing ontologies of physi- cal quantities such as Haas et al. (1978) and Lefort (2005) can be imported to populate the category.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#physical_property</IRI>
+        <Literal xml:lang="en">the temperature of a heat sink, the velocity of a moving ball, or the pressure applied on the wall of some fluid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#physical_property</IRI>
+        <Literal xml:lang="en">a quality that determines the physical state of a material entity, and can be measured as quantitative values based on some measurement units.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#physical_property</IRI>
+        <Literal xml:lang="en">physical property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#physically_related_to</IRI>
+        <Literal xml:lang="en">This relation is held between two instances of specifically dependent continuants, to express those two instances are related to each other due to certain laws of physics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#physically_related_to</IRI>
+        <Literal xml:lang="en">the temperature of the air in this room is physically related to the pressure of the air in this room</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#physically_related_to</IRI>
+        <Literal xml:lang="en">physically related to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pso_comment</IRI>
+        <Literal xml:lang="en">pso comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pso_example_of_usage</IRI>
+        <Literal xml:lang="en">pso example of usage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#pso_synonyms</IRI>
+        <Literal>pso synonyms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#realizable_motion</IRI>
+        <Literal xml:lang="en">In PSO, the notion of a realisable motion of an object is introduced to describe relative motions between objects.
+
+For example, a piston placed in a cylinder has a realisable motion of sliding in a particular direction. A realisable motion could also be identified as stationary as in the case of the cylinder. Realisable motions that depend on each other form kinematic joints often used in engineering. For instance, the relative dependency between the realisable motion of the piston (sliding) and the realisable motion of the cylinder (stationary) can be identified as a sliding joint, which is a type of a kinematic joint.
+
+Typically, kinematic joints can be defined in CAD software (or in mathematics), in idealised forms, using reference geometric entities such as points or lines (Demoly, Matsokis, and Kiritsis 2012; Gruhier et al. 2015). Such definitions of kinematic joints are not applicable in PSO-Physics that focus on physics entities, but can certainly be used in PSO-Sim that can deal with abstract entities. In PSO-Physics, we have created realisable motions so that kinematic joints defined in PSO-Sim refer to them as the desired motions to be simulated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#realizable_motion</IRI>
+        <Literal xml:lang="en">a disposition of a material entity to move in some particular manner through an unfolding process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#realizable_motion</IRI>
+        <Literal xml:lang="en">realizable motion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#represented_by</IRI>
+        <Literal xml:lang="en">a particular mesh file is about the shape of a car.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>#represented_by</IRI>
+        <Literal xml:lang="en">This document is about information artifacts and their representations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#represented_by</IRI>
+        <Literal xml:lang="en">Is_about is a (currently) primitive relation that relates an information artifact to an entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>#represented_by</IRI>
+        <Literal xml:lang="en">7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of &quot;mentions&quot; relation. Weaken the is_about relationship to be primitive. We will try to build it back up by elaborating the various subproperties that are more precisely defined. Some currently missing phenomena that should be considered &quot;about&quot; are predications - &quot;The only person who knows the answer is sitting beside me&quot; , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <IRI>#represented_by</IRI>
+        <Literal xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#represented_by</IRI>
+        <Literal xml:lang="en">this term is part of the Information Artifact Ontology.
+http://www.obofoundry.org/ontology/iao.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#represented_by</IRI>
+        <Literal>represented by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#shape</IRI>
+        <Literal xml:lang="en">A shape is the external form of both material entities and immaterial entities.
+
+Shapes, which inhere in physical entities in reality, are typically represented with geometric models in CAD/CAE applications. The term geometric model is defined in PSO-Sim.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>#shape</IRI>
+        <Literal xml:lang="en">the cylindrical shape of a pipe, roundness of the end surface of a column, or any free-form shapes of material entities and sites</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#shape</IRI>
+        <Literal xml:lang="en">a quality that is an external form of an independent continuant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#shape</IRI>
+        <Literal xml:lang="en">shape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#state_of_matter</IRI>
+        <Literal xml:lang="en">A state of matter specifies whether a material entity is in a solid, liquid, gas, or plasma form.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>#state_of_matter</IRI>
+        <Literal xml:lang="en">a quality that is one of the distinct forms that a material entity can exist as, such as solid, liquid, gas, or plasma.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#state_of_matter</IRI>
+        <Literal xml:lang="en">state of matter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>#time_step</IRI>
+        <Literal xml:lang="en">A time step is used in simulation to discretise the 1-D temporal region (or temporal interval) in which the physical behaviour of interest is located. Therefore, it is about the temporal parts of a temporal interval that is partitioned into equal durations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#time_step</IRI>
+        <Literal xml:lang="en">time step</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal xml:lang="en">In PSO, a process can be used to demarcate the physical process involving one or more objects to be simulated. A physical process can be further demarcated into parts based on the different physical behaviours associated with the process, using &apos;physical behavior&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal xml:lang="en">the pumping process of a pump assembly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000024</IRI>
+        <Literal xml:lang="en">Fiat object parts can be used to identify some portion of a physical object that might be of special interest. In addition, a fiat object part can be used to identify different regions of a multi-material object that are made up of different material substances.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000024</IRI>
+        <Literal xml:lang="en">a portion of fluid in turbulence, a part of a beam under large deformations, or a part of a metal rod under the influence of a electromagnetic field
+
+the layers in a laminated composite object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000027</IRI>
+        <Literal xml:lang="en">Object aggregates can be used to identify a group of physical objects to be simulated together. A mechanical assembly, which is an entity of special interest in multi-body dynamics, can be thought as an object aggregate with constrained relative motions between each pair of objects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000027</IRI>
+        <Literal xml:lang="en">a portion of oil flowing through a pipe, a four-bar mechanism consisting of three linkage members and the ground, or an electric rotor rotating around a stator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000029</IRI>
+        <Literal xml:lang="en">a hole on a metal block through which a piston translates, a channel through which a portion of water flows, or a vacuum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000030</IRI>
+        <Literal xml:lang="en">Objects can be used to identify physical objects being simulated. We can treat fluids as objects since we are only taking snapshots of physical phenomena as input to simulation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000030</IRI>
+        <Literal xml:lang="en">a turbine, a beam, a portion of exhaust gas, or a portion of blood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000035</IRI>
+        <Literal xml:lang="en">In PSO, a process boundary can be used to identify the beginning and the end states of a physical process to be simulated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000038</IRI>
+        <Literal xml:lang="en">used to identify the time interval of a physical process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000038</IRI>
+        <Literal xml:lang="en">the time interval of a pumping process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">is part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">this day is part of this year (occurrent parthood)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">a core relation that holds between a part and its whole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
+
+A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">part_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0001900"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001901</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0040042"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000002</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0040042"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000003</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0040042"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000004</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0040042"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000017</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0040042"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000019</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0040042"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000020</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0040042"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000031</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/valid_for_go_annotation_extension</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/valid_for_go_gp2term</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/valid_for_go_ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://purl.obolibrary.org/obo/valid_for_gocam</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal xml:lang="en">part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <IRI>http://ontologydesignpatterns.org/wiki/Submissions:PartOf</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000050</IRI>
+        <Literal>http://www.obofoundry.org/ro/#OBO_REL:part_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">my body has part my brain (continuant parthood, two material entities)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">this year has part this day (occurrent parthood)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">a core relation that holds between a whole and its part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">has_part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0001900"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001901</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <IRI>http://purl.obolibrary.org/obo/valid_for_go_annotation_extension</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <IRI>http://purl.obolibrary.org/obo/valid_for_go_ontology</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <IRI>http://purl.obolibrary.org/obo/valid_for_gocam</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000051</IRI>
+        <Literal xml:lang="en">has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000119</IRI>
+        <Literal xml:lang="en">a thermal behaviour of an engine during engine ignition is a process profile of an engine ignition process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000179"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000119</IRI>
+        <Literal>has-profile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000119</IRI>
+        <IRI>http://purl.obolibrary.org/obo/bfo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000119</IRI>
+        <Literal xml:lang="en">has profile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000133</IRI>
+        <Literal xml:lang="en">a thermal behaviour of an engine during engine ignition is a process profile of an engine ignition process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000179"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000133</IRI>
+        <Literal>profile-of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000180"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000133</IRI>
+        <Literal>processProfileOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000133</IRI>
+        <IRI>http://purl.obolibrary.org/obo/bfo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000133</IRI>
+        <Literal xml:lang="en">process profile of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_comment"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000148</IRI>
+        <Literal xml:lang="en">can be used to identify the moment a physical process starts or ends</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000155</IRI>
+        <Literal xml:lang="en">a pumping process occupies temporal region of a 5-second time interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000179"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000155</IRI>
+        <Literal>spans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000180"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000155</IRI>
+        <Literal>occupiesTemporalRegion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0010000"/>
+            <IRI>http://purl.obolibrary.org/obo/bfo/axiom/132-001</IRI>
+        </Annotation>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000600"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000155</IRI>
+        <Literal xml:lang="en">p occupies_temporal_region t. This is a primitive relation between an occurrent p and the temporal region t upon which the spatiotemporal region p occupies_spatiotemporal_region projects. (axiom label in BFO2 Reference: [132-001])</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000155</IRI>
+        <IRI>http://purl.obolibrary.org/obo/bfo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000155</IRI>
+        <Literal xml:lang="en">occupies temporal region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000179"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000156</IRI>
+        <Literal>span-of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/BFO_0000180"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000156</IRI>
+        <Literal>spanOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000600"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000156</IRI>
+        <Literal>[copied from inverse property &apos;occupies temporal region&apos;] p occupies_temporal_region t. This is a primitive relation between an occurrent p and the temporal region t upon which the spatiotemporal region p occupies_spatiotemporal_region projects. (axiom label in BFO2 Reference: [132-001])</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000156</IRI>
+        <IRI>http://purl.obolibrary.org/obo/bfo.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000156</IRI>
+        <Literal xml:lang="en">has temporal occupant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/IAO_0000030</IRI>
+        <Literal xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/IAO_0000030</IRI>
+        <Literal xml:lang="en">A generically dependent continuant that is about some thing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/IAO_0000030</IRI>
+        <Literal xml:lang="en">2014-03-10: The use of &quot;thing&quot; is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/IAO_0000030</IRI>
+        <Literal xml:lang="en">information_content_entity &apos;is_encoded_in&apos; some digital_entity in obi before split (040907). information_content_entity &apos;is_encoded_in&apos; some physical_document in obi before split (040907). Previous. An information content entity is a non-realizable information entity that &apos;is encoded in&apos; some digital or physical entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <IRI>http://purl.obolibrary.org/obo/IAO_0000030</IRI>
+        <Literal xml:lang="en">OBI_0000142</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.obolibrary.org/obo/IAO_0000030</IRI>
+        <Literal xml:lang="en">this term is part of the Information Artifact Ontology.
+http://www.obofoundry.org/ontology/iao.html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/IAO_0000030</IRI>
+        <Literal xml:lang="en">information content entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <Literal xml:lang="en">the temperature of a pipe inheres in the pipe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <Literal xml:lang="en">inheres in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <Literal xml:lang="en">this fragility inheres in this vase</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <Literal xml:lang="en">this red color inheres in this apple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <Literal xml:lang="en">a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <Literal xml:lang="en">A dependent inheres in its bearer at all times for which the dependent exists.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <Literal xml:lang="en">inheres_in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0001900"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001901</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000052</IRI>
+        <Literal xml:lang="en">inheres in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <Literal xml:lang="en">bearer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <Literal xml:lang="en">this apple is bearer of this red color</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <Literal xml:lang="en">this vase is bearer of this fragility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <Literal xml:lang="en">a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <Literal xml:lang="en">A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <Literal xml:lang="en">bearer_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <Literal xml:lang="en">is bearer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0001900"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001901</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000053</IRI>
+        <Literal xml:lang="en">bearer of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000056</IRI>
+        <Literal xml:lang="en">participates in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000056</IRI>
+        <Literal xml:lang="en">this blood clot participates in this blood coagulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000056</IRI>
+        <Literal xml:lang="en">this input material (or this output material) participates in this process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000056</IRI>
+        <Literal xml:lang="en">this investigator participates in this investigation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000056</IRI>
+        <Literal xml:lang="en">a relation between a continuant and a process, in which the continuant is somehow involved in the process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000056</IRI>
+        <Literal xml:lang="en">participates_in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000056</IRI>
+        <Literal xml:lang="en">participates in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">an oil pumping process has participant a pump</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">has participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">this blood coagulation has participant this blood clot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">this investigation has participant this investigator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">this process has participant this input material (or this output material)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">a relation between a process and a continuant, in which the continuant is somehow involved in the process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">has_participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal>http://www.obofoundry.org/ro/#OBO_REL:has_participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000057</IRI>
+        <Literal xml:lang="en">has participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000080</IRI>
+        <Literal xml:lang="en">this red color is a quality of this apple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000080</IRI>
+        <Literal xml:lang="en">a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000080</IRI>
+        <Literal xml:lang="en">A quality inheres in its bearer at all times for which the quality exists.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000080</IRI>
+        <Literal xml:lang="en">is quality of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000080</IRI>
+        <Literal xml:lang="en">quality_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000080</IRI>
+        <Literal xml:lang="en">quality of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000086</IRI>
+        <Literal xml:lang="en">this apple has quality this red color</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000086</IRI>
+        <Literal xml:lang="en">a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000086</IRI>
+        <Literal xml:lang="en">A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000086</IRI>
+        <Literal xml:lang="en">has_quality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000086</IRI>
+        <Literal xml:lang="en">has quality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000091</IRI>
+        <Literal xml:lang="en">a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000091</IRI>
+        <Literal xml:lang="en">has disposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000092</IRI>
+        <Literal>inverse of has disposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000092</IRI>
+        <IRI>http://purl.obolibrary.org/obo/RO_0002259</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0000092</IRI>
+        <Literal xml:lang="en">disposition of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001015</IRI>
+        <Literal xml:lang="en">is location of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001015</IRI>
+        <Literal xml:lang="en">my head is the location of my brain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001015</IRI>
+        <Literal xml:lang="en">this cage is the location of this rat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001015</IRI>
+        <Literal xml:lang="en">a relation between two independent continuants, the location and the target, in which the target is entirely within the location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001015</IRI>
+        <Literal xml:lang="en">Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001015</IRI>
+        <Literal xml:lang="en">location_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0001900"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001015</IRI>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001901</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001015</IRI>
+        <Literal xml:lang="en">location of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#pso_example_of_usage"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">a portion of fluid is located in a fluid channel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000111"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">located in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">my brain is located in my head</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000112"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">this rat is located in this cage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">a relation between two independent continuants, the target and the location, in which the target is entirely within the location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1.    Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical (for example, when a portion of fluid exactly fills a cavity), as well as those sorts of inexact location relations which obtain, for example, between brain and head or between ovum and uterus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000116"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000118"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">located_in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/RO_0001900"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001901</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal>http://www.obofoundry.org/ro/#OBO_REL:located_in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <IRI>http://purl.obolibrary.org/obo/valid_for_go_gp2term</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/RO_0001025</IRI>
+        <Literal xml:lang="en">located in</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

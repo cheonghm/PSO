@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://TBD-URL/pso" uri="pso.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo_ro.owl" uri="file:/Users/cheongh/OneDrive%20-%20autodesk/Ontologies/BFO2/ontology/src/bfo_ro.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1625070742082" name="duplicate:http://purl.obolibrary.org/obo/bfo.owl" uri="bfo2_1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1625070742082" name="duplicate:http://purl.obolibrary.org/obo/bfo.owl" uri="bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1625070742082" name="http://purl.obolibrary.org/obo/ro.owl" uri="ro.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1625070742082" name="http://TBD-URL/pso" uri="pso.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1625070742082" name="duplicate:http://TBD-URL/pso-fenics" uri="pso-fenics.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1625070742082" name="duplicate:http://TBD-URL/pso-fenics" uri="new.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1625070742082" name="duplicate:http://TBD-URL/pso-fenics" uri="pso-fenics%20with%20individuals.owl"/>
+    </group>
+</catalog>

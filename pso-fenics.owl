@@ -1,0 +1,1904 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://TBD-URL/pso-fenics"
+     xml:base="http://TBD-URL/pso-fenics"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:bfo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pso="http://TBD-URL/pso#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:pso-fenics="http://TBD-URL/pso-fenics#">
+    <owl:Ontology rdf:about="http://TBD-URL/pso-fenics">
+        <owl:imports rdf:resource="http://TBD-URL/pso"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pso_dialogue_trigger -->
+
+    <owl:AnnotationProperty rdf:about="http://TBD-URL/pso-fenics#pso_dialogue_trigger">
+        <rdfs:label>pso dialogue trigger</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#has_value -->
+
+    <owl:DatatypeProperty rdf:about="http://TBD-URL/pso-fenics#has_value">
+        <rdfs:label>has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#has_vector_values -->
+
+    <owl:DatatypeProperty rdf:about="http://TBD-URL/pso-fenics#has_vector_values">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has vector values</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://TBD-URL/pso#duration_of_physical_behavior -->
+
+    <rdf:Description rdf:about="http://TBD-URL/pso#duration_of_physical_behavior">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#number_of_time_steps"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso#duration_of_physical_behavior"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#number_of_time_steps"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso#duration_of_physical_behavior"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso#fiat_object_surface -->
+
+    <rdf:Description rdf:about="http://TBD-URL/pso#fiat_object_surface">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso#continuant_part_of"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#boundary_condition_situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#body_force -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#body_force">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>body force</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#body_force"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#density -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#density">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#material_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>density</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#density"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#displacement -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#displacement">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>displacement</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#displacement"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#displacement_boundary_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#displacement_boundary_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#boundary_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#displacement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>displacement boundary condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#displacement_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#displacement_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#displacement"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#elastic_modulus -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#elastic_modulus">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#material_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <pso:pso_synonyms>Young&apos;s modulus</pso:pso_synonyms>
+        <rdfs:label>elastic modulus</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#elastic_modulus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#heat_diffusion_of_object -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#heat_diffusion_of_object">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_behavior"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:someValuesFrom rdf:resource="http://TBD-URL/pso-fenics#heat_flux_boundary_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#temperature_boundary_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#duration_of_physical_behavior"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#temperature_initial_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#specific_heat_capacity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#thermal_conductivity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#heat_flux"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>heat diffusion of object</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_diffusion_of_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:someValuesFrom rdf:resource="http://TBD-URL/pso-fenics#heat_flux_boundary_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_diffusion_of_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#temperature_boundary_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_diffusion_of_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#duration_of_physical_behavior"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_diffusion_of_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#temperature_initial_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_diffusion_of_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#specific_heat_capacity"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_diffusion_of_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#thermal_conductivity"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_diffusion_of_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#heat_flux"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#heat_flux -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#heat_flux">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>heat flux</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_flux"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#heat_flux_boundary_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#heat_flux_boundary_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#boundary_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#heat_flux"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>heat flux boundary condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_flux_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#heat_flux_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#heat_flux"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#linear_deformation_of_solid_object -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#linear_deformation_of_solid_object">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_behavior"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#displacement_boundary_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#surface_force_boundary_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#elastic_modulus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#shear_modulus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#body_force"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>linear deformation of solid object</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#linear_deformation_of_solid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#displacement_boundary_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#linear_deformation_of_solid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#surface_force_boundary_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#linear_deformation_of_solid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#elastic_modulus"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#linear_deformation_of_solid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#shear_modulus"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#linear_deformation_of_solid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#body_force"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_behavior"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:someValuesFrom rdf:resource="http://TBD-URL/pso-fenics#pressure_initial_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:someValuesFrom rdf:resource="http://TBD-URL/pso-fenics#velocity_initial_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#pressure_boundary_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#velocity_boundary_condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#duration_of_physical_behavior"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#density"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#viscosity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#body_force"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>motion of viscous fluid object</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:someValuesFrom rdf:resource="http://TBD-URL/pso-fenics#pressure_initial_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:someValuesFrom rdf:resource="http://TBD-URL/pso-fenics#velocity_initial_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#pressure_boundary_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#velocity_boundary_condition"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000119"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#duration_of_physical_behavior"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#density"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#viscosity"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#body_force"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#number_of_time_steps -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#number_of_time_steps">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>number of time steps</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#number_of_time_steps"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pressure -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#pressure">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>pressure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#pressure"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pressure_boundary_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#pressure_boundary_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#boundary_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#pressure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>pressure boundary condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#pressure_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#pressure_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#pressure"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pressure_initial_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#pressure_initial_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#initial_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#pressure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>pressure initial condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#pressure_initial_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#pressure"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#pressure_initial_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#shear_modulus -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#shear_modulus">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#material_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <pso:pso_synonyms>modulus of rigidity</pso:pso_synonyms>
+        <rdfs:label>shear modulus</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#shear_modulus"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#specific_heat_capacity -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#specific_heat_capacity">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#material_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>specific heat capacity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#specific_heat_capacity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#surface_force -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#surface_force">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <pso:pso_synonyms>traction</pso:pso_synonyms>
+        <rdfs:label>surface force</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#surface_force"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#surface_force_boundary_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#surface_force_boundary_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#boundary_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#surface_force"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>surface force boundary condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#surface_force_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#surface_force_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#surface_force"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#temperature -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#temperature">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>temperature</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#temperature"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#temperature_boundary_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#temperature_boundary_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#boundary_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#temperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>temperature boundary condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#temperature_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#temperature_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#temperature"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#temperature_initial_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#temperature_initial_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#initial_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#temperature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>temperature initial condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#temperature_initial_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#temperature"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#temperature_initial_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#thermal_conductivity -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#thermal_conductivity">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#material_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>thermal conductivity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#thermal_conductivity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#velocity -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#velocity">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#physical_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>velocity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#velocity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_vector_values"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#velocity_boundary_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#velocity_boundary_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#boundary_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#velocity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>velocity boundary condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#velocity_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#velocity_boundary_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#velocity"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#velocity_initial_condition -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#velocity_initial_condition">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#initial_condition_situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#velocity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>velocity initial condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#velocity_initial_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso-fenics#velocity"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#velocity_initial_condition"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#viscosity -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#viscosity">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#material_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>viscosity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#viscosity"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#Poisson&apos;s_ratio -->
+
+    <owl:Class rdf:about="http://TBD-URL/pso-fenics#Poisson&apos;s_ratio">
+        <rdfs:subClassOf rdf:resource="http://TBD-URL/pso#material_property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Poisson&apos;s ratio</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://TBD-URL/pso-fenics#Poisson&apos;s_ratio"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso-fenics#has_value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#physical_behavior"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso#made_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#material_substance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#physical_behavior"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://TBD-URL/pso#made_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://TBD-URL/pso#material_substance"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <pso-fenics:pso_dialogue_trigger rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</pso-fenics:pso_dialogue_trigger>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pipe -->
+
+    <owl:NamedIndividual rdf:about="http://TBD-URL/pso-fenics#pipe">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <pso:has_continuant_part rdf:resource="http://TBD-URL/pso-fenics#pipe_surface1"/>
+        <pso:has_continuant_part rdf:resource="http://TBD-URL/pso-fenics#pipe_surface2"/>
+        <pso:has_continuant_part rdf:resource="http://TBD-URL/pso-fenics#pipe_surface3"/>
+        <pso:has_continuant_part rdf:resource="http://TBD-URL/pso-fenics#pipe_surface4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pipe_surface1 -->
+
+    <owl:NamedIndividual rdf:about="http://TBD-URL/pso-fenics#pipe_surface1">
+        <rdf:type rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pipe_surface2 -->
+
+    <owl:NamedIndividual rdf:about="http://TBD-URL/pso-fenics#pipe_surface2">
+        <rdf:type rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pipe_surface3 -->
+
+    <owl:NamedIndividual rdf:about="http://TBD-URL/pso-fenics#pipe_surface3">
+        <rdf:type rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://TBD-URL/pso-fenics#pipe_surface4 -->
+
+    <owl:NamedIndividual rdf:about="http://TBD-URL/pso-fenics#pipe_surface4">
+        <rdf:type rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TBD-URL/pso#boundary_condition_situation"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso#duration_of_physical_behavior"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso#initial_condition_situation"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso#physical_behavior"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#number_of_time_steps"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#body_force"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#displacement"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#heat_flux"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#pressure"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#surface_force"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#temperature"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#velocity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#density"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#elastic_modulus"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#shear_modulus"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#specific_heat_capacity"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#thermal_conductivity"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#viscosity"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#Poisson&apos;s_ratio"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#displacement_boundary_condition"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#heat_flux_boundary_condition"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#pressure_boundary_condition"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#surface_force_boundary_condition"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#temperature_boundary_condition"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#velocity_boundary_condition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#heat_diffusion_of_object"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#linear_deformation_of_solid_object"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#motion_of_viscous_fluid_object"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#pressure_initial_condition"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#temperature_initial_condition"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#velocity_initial_condition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#pipe"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#pipe_surface1"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#pipe_surface2"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#pipe_surface3"/>
+            <rdf:Description rdf:about="http://TBD-URL/pso-fenics#pipe_surface4"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TBD-URL/pso-fenics#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TBD-URL/pso-fenics#o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TBD-URL/pso-fenics#m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://TBD-URL/pso-fenics#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boundary condition assignment</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://TBD-URL/pso#boundary_condition_situation"/>
+                        <swrl:argument1 rdf:resource="#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://TBD-URL/pso#fiat_object_surface"/>
+                                <swrl:argument1 rdf:resource="#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://TBD-URL/pso#physical_property"/>
+                                        <swrl:argument1 rdf:resource="#p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                                <swrl:argument1 rdf:resource="#s"/>
+                                                <swrl:argument2 rdf:resource="#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                                        <swrl:argument1 rdf:resource="#p"/>
+                                                        <swrl:argument2 rdf:resource="#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <swrl:argument1 rdf:resource="#s"/>
+                        <swrl:argument2 rdf:resource="#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label>material property assignment</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://TBD-URL/pso#physical_behavior"/>
+                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+                                <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#o"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://TBD-URL/pso#material_substance"/>
+                                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#m"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://TBD-URL/pso#made_of"/>
+                                                <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#o"/>
+                                                <swrl:argument2 rdf:resource="http://TBD-URL/pso-fenics#m"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#o"/>
+                                                        <swrl:argument2 rdf:resource="http://TBD-URL/pso-fenics#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://TBD-URL/pso#material_property"/>
+                                                                <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#p"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                                                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#p"/>
+                                                                        <swrl:argument2 rdf:resource="http://TBD-URL/pso-fenics#b"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#m"/>
+                        <swrl:argument2 rdf:resource="http://TBD-URL/pso-fenics#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label>body property assignment</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://TBD-URL/pso#physical_behavior"/>
+                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+                                <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#o"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://TBD-URL/pso#physical_property"/>
+                                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                                <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#o"/>
+                                                <swrl:argument2 rdf:resource="http://TBD-URL/pso-fenics#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#p"/>
+                                                        <swrl:argument2 rdf:resource="http://TBD-URL/pso-fenics#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <swrl:argument1 rdf:resource="http://TBD-URL/pso-fenics#o"/>
+                        <swrl:argument2 rdf:resource="http://TBD-URL/pso-fenics#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
